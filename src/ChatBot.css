@@ -3,28 +3,29 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  animation: fadeIn 0.8s ease-out;
+  padding-bottom: 2rem;
 }
 
 .chatbot-card {
   width: 100%;
-  max-width: 900px;
-  height: 700px; /* Reliable height for the chatbot */
-  background: rgba(15, 23, 42, 0.4);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  max-width: 1000px;
+  height: 800px; /* Increased height for better interaction */
+  background: var(--glass-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border: 1px solid var(--glass-border);
-  border-radius: 28px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  animation: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 32px;
+  box-shadow: 
+    var(--shadow-2xl),
+    0 0 40px rgba(99, 102, 241, 0.1);
+  overflow: hidden; /* Only to keep border radius */
   position: relative;
+  transition: transform 0.3s ease;
 }
 
 .chat-iframe {
   width: 100%;
-  height: calc(100% + 35px); /* Adjusted to keep input field safe */
-  margin-bottom: -35px;
+  height: 100%; /* Total height to ensure no clipping of input */
   border: none;
   display: block;
 }

@@ -7,28 +7,53 @@ function App() {
     <div className="app-main">
       <nav className="top-nav">
         <div className="logo">
-          <div className="logo-icon">AI</div>
-          <span>ChatBot KL</span>
+          <div className="logo-icon">KL</div>
+          <span>Intelligence Portal</span>
         </div>
-        <div className="nav-links">
-          <a href="#" className="active">Assistant</a>
-          <a href="#">Knowledge Base</a>
-          <a href="#">Settings</a>
+        <div className="nav-actions">
+          <div className="status-badge"><span className="dot"></span> System Active</div>
+          <div className="user-profile">
+            <div className="user-avatar">MD</div>
+          </div>
         </div>
       </nav>
       
-      <main className="chat-content">
-        <header className="page-header">
-          <h1>AI Customer Intelligence</h1>
-          <p>Powered by advanced RAG technology to provide accurate, real-time responses.</p>
-        </header>
-        
-        <ChatBot />
-      </main>
-      
-      <footer className="app-footer">
-        &copy; 2026 ChatBot KL - Intelligent Assistant Portal
-      </footer>
+      <div className="dashboard-layout">
+        <aside className="sidebar">
+          <div className="sidebar-group">
+            <label>ANALYTICS</label>
+            <a href="#" className="active">Overview</a>
+            <a href="#">Interactions</a>
+            <a href="#">Sentiment</a>
+          </div>
+          <div className="sidebar-group">
+            <label>KNOWLEDGE</label>
+            <a href="#">Collections</a>
+            <a href="#">Training Data</a>
+          </div>
+        </aside>
+
+        <main className="main-content">
+          <header className="content-header">
+            <div className="header-text">
+              <h1>AI Command Center</h1>
+              <p>Real-time cognitive processing engine for your enterprise data.</p>
+            </div>
+            <div className="header-stats">
+              <div className="stat-card">
+                <span className="label">Uptime</span>
+                <span className="value">99.9%</span>
+              </div>
+              <div className="stat-card">
+                <span className="label">Inference</span>
+                <span className="value">24ms</span>
+              </div>
+            </div>
+          </header>
+          
+          <ChatBot />
+        </main>
+      </div>
     </div>
   )
 }
