@@ -1,7 +1,111 @@
-.app-container {
+.app-main {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-gradient);
+  color: var(--text-main);
+}
+
+.top-nav {
+  padding: 1.25rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: rgba(15, 23, 42, 0.3);
+  border-bottom: 1px solid var(--glass-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--primary);
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-gradient);
+  font-size: 0.8rem;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: white;
+}
+
+.chat-content {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  animation: slideUp 0.6s ease-out;
+}
+
+.page-header h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(to right, #fff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-header p {
+  color: var(--text-muted);
+  max-width: 600px;
+}
+
+.app-footer {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--glass-border);
+  background: rgba(15, 23, 42, 0.2);
+}
+
+@media (max-width: 768px) {
+  .top-nav {
+    padding: 1rem;
+  }
+  .nav-links {
+    display: none;
+  }
+  .page-header h1 {
+    font-size: 1.75rem;
+  }
 }
